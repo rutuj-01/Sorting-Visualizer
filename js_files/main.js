@@ -1,27 +1,57 @@
+
+function getRandomNumber(){
+    return Math.floor(Math.random() * 400) + 5;
+}
+
+
 function Bars(){
 
-	var arr = [];
-	var divs=[];
-	var cont=document.getElementById("heightBars");
-	//cont.style="flex-direction:row";
-	for(var i=0;i<100;i++)
-    {
-        arr[i]=Math.floor(Math.random() * 100 ) + 1;
-        divs[i]=document.createElement("div");
-        	
-        cont.appendChild(divs[i]);
-        margin_size=0.1;
-        divs[i].style=" margin:0% " + margin_size + "%; background-color:blue; width:" + (100/100-(2*margin_size)) + "%; height:" + (2) + "%;";
-    }
-    console.log(arr)
-    console.log(divs)
-	// while(arr.length < 100){
-	//     var r = Math.floor(Math.random() * 100) + 1;
-	//     if(arr.indexOf(r) === -1) arr.push(r);
+            let lineContainerElement = document.getElementById('heightBars')
 
-	//     divs[i]=document.createElement("div");
-	//     document.body.appendChild(divs[i]);
+            // Remove Present Children
+            let child = lineContainerElement.lastElementChild;  
+            while (child) { 
+                lineContainerElement.removeChild(child); 
+                child = lineContainerElement.lastElementChild; 
+            }
+            array = []
 
-	// }
-	// console.log(arr);
-}
+            // Add new Children
+            for (let i = 0; i < 100; ++i) {
+                let randomNumber = getRandomNumber()
+                array.push(randomNumber)
+
+                let lineElement = document.createElement('div')
+                lineElement.className = "bar"
+                lineElement.style.height = randomNumber + 'px'
+                lineElement.style.width = 100/100-(2*0.1) + "%"
+                lineContainerElement.appendChild(lineElement)
+            }
+            console.log(array);
+            console.log(lineContainerElement);
+        }
+	// var div_sizes=[];
+ //    var divs=[];
+ //    var margin_size;
+ //    var array_size=100;
+	// var cont=document.getElementById("heightBars");
+	// cont.style="flex-direction:row";
+
+	// for(var i=0;i<100;i++)
+ //    {
+ //        cont.innerHTML="";
+ //        div_sizes[i]=Math.floor(Math.random() * 100 ) + 1;
+ //        //console.log(div_sizes);
+ //        divs[i]=document.createElement("div");
+ //        //console.log(divs);
+ //        var text = document.createTextNode("Tutorix is the best e-learning platform");
+ //        divs[i].appendChild(text);
+ //        cont.appendChild(divs[i]);
+ //        //console.log(cont);
+ //        margin_size=0.1;
+ //        divs[i].style=" margin:0% " + margin_size + "%; background-color:white; width:" + (100/array_size-(2*margin_size)) + "%; height:" + (div_sizes[i]) + "%;";
+ //    }
+ //    console.log(cont);
+ //    console.log(div_sizes);
+ //    console.log(divs);
+

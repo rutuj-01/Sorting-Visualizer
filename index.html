@@ -4,19 +4,40 @@
 	<script src="js_files/main.js"></script>
 	<title>Sorting Visualizer</title>
 	<style>
+		#heightBars {
+            margin-top: 40px;
+            min-height: 600px;
+            padding: 32px;
+
+        }
 		#navbar-text{
 			background-color: #37474f;
 		}
+		.bar{
+			width: 5px;
+            display: inline-block;
+            margin: 0 1px;
+            background-color: white;
+            transition: height 100ms ease-in;
+            /*flex-direction:row;*/
+		}
+
+		/*#heightBars{
+			 
+            
+		}
+*/
 	</style>
 </head>
 <body style="background-color:#37474f;">
+
 	<h1 style="color:white;text-align: center;">
 		Sorting Visualizer
 	</h1>
 		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
 
-   <button type="button" class="btn btn-light bubble sort" >New Array</button>
+   <button type="button" class="btn btn-light bubble sort" onclick="Bars()" >New Array</button>
     
     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
       
@@ -31,16 +52,9 @@
   </div>
 </nav>
 
-
-
 <div id="heightBars">
-	<button onclick="Bars()"> LASL</button>
 
 </div>
-
-
-
-
 
 
 
