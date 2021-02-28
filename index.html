@@ -2,6 +2,9 @@
 <html>
 <head>
 	<script src="js_files/main.js"></script>
+	<script src="js_files/bubble.js"></script>
+  <script src="js_files/visualisation.js"></script>
+  
 	<title>Sorting Visualizer</title>
 	<style>
 		#heightBars {
@@ -19,14 +22,9 @@
             margin: 0 1px;
             background-color: white;
             transition: height 100ms ease-in;
-            /*flex-direction:row;*/
+
 		}
 
-		/*#heightBars{
-			 
-            
-		}
-*/
 	</style>
 </head>
 <body style="background-color:#37474f;">
@@ -42,7 +40,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarText">
       
       <span class="navbar-text">
-        <button type="button" class="btn btn-light bubble sort" >Bubble Sort</button>
+        <button type="button" class="btn btn-light bubble sort" onclick="Bubble()" >Bubble Sort</button>
         <button type="button" class="btn btn-light bubble sort" >Selection sort</button>
         <button type="button" class="btn btn-light bubble sort" >Insertion sort</button>
         <button type="button" class="btn btn-light bubble sort" >Quick sort</button>
