@@ -1,10 +1,11 @@
 async function Bubble()
     {
+
       var f=0;
       console.log(array);	
-      for(var i=0;i<100;i++)
+      for(var i=0;i<50;i++)
       {
-      	for(var j=0;j<100-i-1;j++)
+      	for(var j=0;j<50-i-1;j++)
       	{
       		
             arr1= document.getElementById(j);
@@ -13,7 +14,7 @@ async function Bubble()
             if(array[j] > array[j+1])
             {
 
-                 f=1;
+                 // f=1;
                 //console.log(array[j],array[j+1]);
                 //console.log(arr1,arr2)
                 style1 = window.getComputedStyle(arr1);
@@ -42,17 +43,17 @@ async function Bubble()
                   const fast = await resolveAfter1Second()
                   //console.log(fast)
                  //  await 2;
-                       arr1.style.background = "white";
-                  arr2.style.background="white";
+                arr1.style.background = "white";
+                arr2.style.background="white";
             
         }
          
     }
-    if(f==1){
-      arr1.style.background = "green";
-                  arr2.style.background="green";
-                  f=0;
-    }
+    // if(f==1){
+    //   arr1.style.background = "green";
+    //               arr2.style.background="green";
+    //               f=0;
+    // }
     console.log(array);
   }    
     
@@ -66,6 +67,6 @@ function resolveAfter1Second() {
     setTimeout(function() {
       resolve("fast")
       //console.log("fast promise is done")
-    }, 50)
+    }, 30)
   })
 }

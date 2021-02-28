@@ -1,6 +1,6 @@
 
 function getRandomNumber(){
-    return Math.floor(Math.random() * 400) + 5;
+    return Math.floor(Math.random() * 0.5*(800) ) + 10
 }
 
 
@@ -16,7 +16,7 @@ function Bars(){
             array = []
 
             // Add new Children
-            for (let i = 0; i < 100; ++i) {
+            for (let i = 0; i < 50; ++i) {
                 let randomNumber = getRandomNumber()
                 array.push(randomNumber)
 
@@ -24,7 +24,7 @@ function Bars(){
                 lineElement.className = "bar"
                 lineElement.id=i
                 lineElement.style.height = randomNumber + 'px'
-                lineElement.style.width = 100/100-(2*0.1) + "%"
+                lineElement.style.width = 100/50-(2*0.1) + "%"
                 lineContainerElement.appendChild(lineElement)
             }
             console.log(array);
