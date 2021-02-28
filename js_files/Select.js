@@ -9,6 +9,7 @@ async function Select(){
             if(array[j] < array[min]) {
                 min=j; 
             }
+        }
          
          if (min != i) {
          	
@@ -26,7 +27,7 @@ async function Select(){
              arr1.style.height = arr2.style.height;
              arr2.style.height=temp2;     
         
-             //const fast = await resolveAfter1Second()
+             const fast = await resolveAfter1Second()
                   //console.log(fast)
                  //  await 2;
                 arr1.style.background = "green";
@@ -34,7 +35,7 @@ async function Select(){
 
         }
 
-      }
+      
 
     console.log(array);
     }
